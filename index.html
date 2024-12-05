@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="form">
+        <label for="userName" class="form-label">Username</label>
+        <input type="text" id="userName" class="form-input" required />
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-input password-input"
+          onfocus="validatePassword()"
+          onkeyup="validatePassword()"
+          onblur="validatePassword()"
+          required
+        />
+        <button type="submit" class="submitBtn">Submit</button>
+      </form>
+    </div>
+    <form>
+      <label id="lblMessage"
+        ><strong>Password must contain the following:</strong></label
+      >
+      <label id="lblMessage2"></label>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
